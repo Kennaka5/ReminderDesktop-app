@@ -1,9 +1,13 @@
-- name: Test Reminder
+- from: 'xyz@gmail.com' 
+  to: 'kennaka5@gmail.com'
+  name: Test Reminder
   schedule: '* * * * *'
   message: Do something for me, will you? 
   types: email,desktop
 
-- name: Test Reminder 2
+- from: 'xyz@gmail.com' 
+  to: 'kennaka5@gmail.com'
+  name: Test Reminder 2
   schedule: '* * * * *'
   message: Answer to everything is, 42.
   types: email
