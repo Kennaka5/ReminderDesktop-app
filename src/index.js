@@ -5,6 +5,7 @@ const yaml = require("js-yaml");
 const nodemailer = require("nodemailer");
 var CronJob = require("cron").CronJob;
 const notifier = require("node-notifier");
+const desktopNotification = require('./desktop.js');
 
 //bring in Yaml data to work with
 const fileContents = fs.readFileSync("./.reminder.yaml", "utf8");
@@ -25,14 +26,7 @@ data.forEach((element) => {
   const types = element.types.split(",");
   const schedule = element.schedule;
 
-  /// define function for desktop notifications
-  function desktopNotification() {
-    console.log("desktopNotification");
-    notifier.notify({
-      title: element.name,
-      message: element.message,
-    });
-  }
+
   /// define Email Object
   const mailInfo = {
     from: process.env.REMINDER_EMAIL,
@@ -57,8 +51,7 @@ data.forEach((element) => {
       (e) => {
         console.log("e", e);
         if (e === "desktop") {
-          console.log("desktop called");
-          desktopNotification();
+          desktopNotification(element.name, element.message);
         } else {
           console.log("email");
         }
