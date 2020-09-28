@@ -3,9 +3,10 @@ require("dotenv").config();
 var CronJob = require("cron").CronJob;
 const desktopNotification = require('./desktop.js');
 const email = require("./email.js");
-const data = require("./importYaml.js");
+const parseData = require("./importYaml.js");
 
-data.forEach((element) => {
+
+parseData.forEach((element) => {
   //TODO reminder element validation
   const types = element.types.split(",");
   const schedule = element.schedule;
@@ -29,3 +30,4 @@ data.forEach((element) => {
   });
   job.start();
 })
+
