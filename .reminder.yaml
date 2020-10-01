@@ -6,4 +6,4 @@
 - name: Test Reminder 2
   schedule: '* * * * * *'
   message: Answer to everything is, 42.
-  types: email
+  types: email,text

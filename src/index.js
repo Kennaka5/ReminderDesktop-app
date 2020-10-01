@@ -6,20 +6,22 @@ const email = require("./email.js");
 const parseData = require("./importYaml.js");
 
 
-parseData.forEach((element) => {
+
+ parseData().forEach((element) => {
   //TODO reminder element validation
   const types = element.types.split(",");
   const schedule = element.schedule;
+
   //create cron job that uses schedule
   const job = new CronJob(schedule, function () {
     //EXACUTE FUNCTION BASED ON TYPE
     types.forEach(
       (e) => {
         if (e === "desktop") {
-          desktopNotification(element.name, element.message);
+          // desktopNotification(element.name, element.message);
           console.log("desktop");
         } else {
-          email(element.name, element.message)
+          // email(element.name, element.message)
           console.log("email");
         }
       },
