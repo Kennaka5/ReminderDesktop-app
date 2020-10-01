@@ -1,9 +1,14 @@
 const fs = require("fs");
 const yaml = require("js-yaml");
-const fileContents = fs.readFileSync("./.reminder.yaml", "utf8");
-//bring in Yaml data to work with
 
+/**
+ * TODO: define function function
+ * When is an error thrown (for what reason).
+ * Once since of what this does.
+ * Returns set of parsed & validated reminders.
+ */
 function parseData() {
+  const fileContents = fs.readFileSync("./.reminder.yaml", "utf8");
   const dataFile = yaml.safeLoad(fileContents);
   const data = new Set(dataFile);
 
