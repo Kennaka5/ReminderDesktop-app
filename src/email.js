@@ -9,7 +9,7 @@ if (!userName) {
 if (!passWord) {
   throw Error("missing REMINDER_EMAIL_PASSWORD env variable.");
 }
-
+///Creates Mailer object to be used in sendMAil() see: https://nodemailer.com/
 const mailTransporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -27,6 +27,7 @@ function email(name, message) {
     subject: name,
     text: message,
   };
+  //sends email via "nodemailer's library"
   mailTransporter.sendMail(mailInfo, function (err, data) {
     if (err) {
       console.log("Error Occurs", err);

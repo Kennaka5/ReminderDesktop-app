@@ -1,6 +1,6 @@
 const notifier = require("node-notifier");
 
-// define function for desktop notifications
+// sends desktop notifications via node-notifier see : https://www.npmjs.com/package/node-notifier
 function desktopNotification(name, message) {
   console.log("desktopNotification");
   notifier.notify({

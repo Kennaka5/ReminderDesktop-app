@@ -1,12 +1,11 @@
 const fs = require("fs");
 const yaml = require("js-yaml");
 
-/**
- * TODO: define function function
- * When is an error thrown (for what reason).
- * Once since of what this does.
- * Returns set of parsed & validated reminders.
- */
+/*
+**parseDAta() reads the fileContents of '.reminder.yaml' and moves each object into a new set
+    1. Once the set is created the function loops through the new set and checks to make sure the message objects are valid
+    2. if any of the parameters are invalid the app will stop and specify what parameter is missing from the object, or if the parameter was not formatted corrctly
+*/
 function parseData() {
   const fileContents = fs.readFileSync("./.reminder.yaml", "utf8");
   const dataFile = yaml.safeLoad(fileContents);
