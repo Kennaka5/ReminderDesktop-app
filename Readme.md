@@ -10,7 +10,7 @@ The ReminderProject is a desktop app that reads a .yaml in the root directory to
  
 2. Run npm init to create a package Json
  
-3. Install the following dependencies: npm install **CronJob, js-yaml nodemailer, node-notifier** 
+3. Install the following dependencies: npm install **CronJob, js-yaml, nodemailer, node-notifier** 
  
 4. Git Clone this project into your _designated folder_
  
@@ -28,7 +28,7 @@ The ReminderProject is a desktop app that reads a .yaml in the root directory to
         4. type (the type of notification you would like to recive: Desktop or Email)
     - For more information see **example yaml config**
  
-- ### required ENV variables (email)
+- ### Required ENV variables (email)
     -this application uses a .env file to protect the email address and password of the user's email account
         1. create a .env file in your root directory and assign the following variables:
  
@@ -36,7 +36,7 @@ The ReminderProject is a desktop app that reads a .yaml in the root directory to
         REMINDER_EMAIL_PASSWORD=<YOUR EMAIL PASSWORD HERE>
  
  
-## example yaml config ##
+## Example yaml config ##
  
 - name: Trash reminder
   schedule: '5 * * * *'
@@ -48,6 +48,6 @@ The ReminderProject is a desktop app that reads a .yaml in the root directory to
   alert: email
  
  
-## how to run this application
+## How to run this application
  
 To run this application navigate to the root directory of your _designated folder_ and run 'npm start' to run the application 
