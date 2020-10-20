@@ -1,10 +1,12 @@
 const fs = require("fs");
 const yaml = require("js-yaml");
 
-/*
-**parseDAta() reads the fileContents of '.reminder.yaml' and moves each object into a new set
-    1. Once the set is created the function loops through the new set and checks to make sure the message objects are valid
-    2. if any of the parameters are invalid the app will stop and specify what parameter is missing from the object, or if the parameter was not formatted corrctly
+/**
+ * 
+ * parseDAta() reads the fileContents of '.reminder.yaml' and moves each object into a new set
+ * Once the set is created the function loops through the new set and checks to make sure the message objects are valid
+ * If any of the parameters are invalid the app will exit and specify what parameter is missing from the object, or if the parameter was not formatted corrctly  
+ * 
 */
 function parseData() {
   const fileContents = fs.readFileSync("./.reminder.yaml", "utf8");

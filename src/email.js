@@ -18,7 +18,9 @@ const mailTransporter = nodemailer.createTransport({
   },
 });
 
-//loop through data to get notification types and Schedules
+/**
+ *  Defines tha mail object and sends it thought sendMail.
+ */
 function email(name, message) {
   /// define Email Object
   const mailInfo = {

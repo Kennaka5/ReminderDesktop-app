@@ -7,10 +7,11 @@ const parseData = require("./importYaml.js");
 
 
 /* 
-forEach loop below loops through the validated data from parseData() and checks the ype to determine if the message will be sent via Email or Desktop
+forEach loop below loops through the validated data from parseData()
+ and checks the type to determine if the message will be sent via Email or Desktop
 */
  parseData().forEach((element) => {
-  //TODO reminder element validation
+ //reminder element validation
   const types = element.types.split(",");
   const schedule = element.schedule;
 

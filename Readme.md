@@ -8,9 +8,9 @@ The ReminderProject is a desktop app that reads a .yaml in the root directory to
  
 1. Create a folder on your computer so you have a _designated folder_ to open the application.
  
-2. Run npm init to create a package Json
+2. Run npm init to create a package Json: `npm init`
  
-3. Install the following dependencies: npm install **CronJob, js-yaml, nodemailer, node-notifier** 
+3. Install the following dependencies: npm install **CronJob, js-yaml, nodemailer, node-notifier** `npm install CronJob & js-yaml & nodemailer & node-notifier`
  
 4. Git Clone this project into your _designated folder_
  
@@ -50,4 +50,4 @@ The ReminderProject is a desktop app that reads a .yaml in the root directory to
  
 ## How to run this application
  
-To run this application navigate to the root directory of your _designated folder_ and run 'npm start' to run the application 
+To run this application navigate to the root directory of your _designated folder_ and run `npm start` to run the application 
