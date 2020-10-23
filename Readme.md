@@ -1,22 +1,20 @@
-## About the Application ##
+## About the Application 
  
 The ReminderProject is a desktop app that reads a .yaml in the root directory to send reminder messages via  **Desktop notifications** or **Email notifications**, pending on how the user would like their reminder message received.
  
  
  
-## Steps to install this app ## 
+## Steps to install this app  
  
 1. Create a folder on your computer so you have a _designated folder_ to open the application.
  
-2. Run npm init to create a package Json: `npm init`
+2. Git Clone this project into your _designated folder_
  
-3. Install the following dependencies: npm install **CronJob, js-yaml, nodemailer, node-notifier** `npm install CronJob & js-yaml & nodemailer & node-notifier`
- 
-4. Git Clone this project into your _designated folder_
+3. Install dependencies: `npm install` 
  
  
  
-## Required Data##
+## Required Data
  
 - ### .reminder.yaml
     - there will already be a .reminder.yaml file in your cloned project for you to test the application.  
@@ -36,18 +34,20 @@ The ReminderProject is a desktop app that reads a .yaml in the root directory to
         REMINDER_EMAIL_PASSWORD=<YOUR EMAIL PASSWORD HERE>
  
  
-## Example yaml config ##
+## Example yaml config 
  
-- name: Trash reminder
-  schedule: '5 * * * *'
-  message: remind me to take out the trash
-  alert: email,desktop
-- name: Pay phone bill
-  schedule: '5 4 1 * *'
-  message: time to pay the phone bill
-  alert: email
+    - name: Trash reminder
+      schedule: '5 * * * *'
+      message: remind me to take out the trash
+      alert: email,desktop
+    - name: Pay phone bill
+      schedule: '5 4 1 * *'
+      message: time to pay the phone bill
+      alert: email
  
  
 ## How to run this application
  
 To run this application navigate to the root directory of your _designated folder_ and run `npm start` to run the application 
+
+### Pull Requests Welcome!
